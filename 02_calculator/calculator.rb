@@ -22,5 +22,19 @@ def multiply(nums)
 end
 
 def power(num1, num2)
-	num1 ^ num2
+	result = 1
+	(1..num2).each{ |value| result *= num1 }
+
+	result
+end
+
+def factorial(num)
+	result = 1
+
+	if(num == 0 || num == 1)
+		result = 1
+	else
+		(1..num).each{ |value| result *= value }
+	end
+	result
 end
